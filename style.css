@@ -12,6 +12,17 @@
 
 /* shared styles */
 
+main, footer{
+    max-width: 1440px;
+    margin-left: 250px;
+    margin-right: 120px;
+}
+
+main > section{
+    margin-top: 130px;
+}
+
+
 .display-flex{
     display: flex;
 }
@@ -110,11 +121,253 @@ text-align: center;
 
 
 
-/* Responsive Media query */
+/* teams and features styles */
+
+.teams{
+    align-items: center;
+}
+
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+}
+
+.features-title{
+    font-size: 2.6rem;
+    font-family: Work Sans;
+    font-weight: 700;
+    line-height: 53px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+#quick-features{
+    color: rgb(255, 144, 14);
+}
+
+.features-description{
+    color: rgb(114, 114, 114);
+font-family: Work Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0%;
+text-align: left;
+}
+
+
+
+    /* ennjoy features section */
+
+#vp-border{
+    border-left: 5px solid rgb(255, 144, 14);
+    padding-left: 20px;
+}
+
+
+.features-card{
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    
+}
+
+.features-card, .enjoy-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(19, 19, 19);
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.enjoy-features {
+    gap: 140px;
+}
+
+
+/* some facts style */
+
+.fact{
+    box-sizing: border-box;
+border: 1px solid rgb(255, 144, 14);
+border-radius: 8px;
+width: 240px;
+height: 240px;
+text-align: center;
+justify-content: center;
+align-items: center;
+
+}
+
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-number{
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin: 5px 0px 10px 0px;
+   
+    color: rgb(66, 66, 66);
+}
+
+.fact-name{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(114, 114, 114);
+    margin-top: 10px;
+}
+
+
+.fact-description{
+    max-width: 540px;
+}
+
+
+
+
+#badge{
+    padding: 45px 42px;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#big-badge{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+#small-badge{
+    font-size: 1.5rex;
+    font-weight: 500;
+}
+
+
+
+
+/* sponsores styles */
+
+
+.sponsors-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+
+.sponsores-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsores-companies img{
+    filter: grayscale(100%);
+}
+
+
+.architect-features img{
+    width: 100%;
+}
+
+
+footer{
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 8px;
+    height: 100px;
+    width: 1440px;
+    background: rgb(255, 244, 231);
+    margin-top: 40px;
+    margin-bottom: 215px;
+}
+
+
+.footer-desxription{
+    color: rgb(114, 114, 114);
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0%;
+}
+
+
+
+/* Responsive Media query for small device */
 
 
 @media screen and (max-width: 576px){
-    .navbar, .nav-link{
+    .navbar,
+     .nav-link, 
+     .teams, 
+     .enjoy-features{
         flex-direction: column;
     }
+
+    .team-img-container,
+     .fact-container, 
+     .sponsores-companies{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .our-features{
+        margin-left: 50px;
+    }
+
+    .fact-container{
+        justify-items: center;
+        gap: 24px;
+    }
+
+    .sponsores-companies{
+        justify-items: center;
+        gap: 50px;
+    }
+
+    .badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+
+}
+
+
+
+/* Responsive Media query for medium device */
+
+
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .teams, 
+    .enjoy-features{
+        flex-direction: column;
+    }
+
+    .our-features{
+        margin: 40px auto;
+    }
+
+    .sponsores-companies, .fact-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+
+    .badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+
 }
